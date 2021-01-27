@@ -1,0 +1,43 @@
+Flask
+
+# 1.  Setup up a Flask server:
+        from flask import Flask
+
+        # Creating an instance of Flask class, named app:
+        server_name = Flask(__name__)
+
+        # *Route Decorator:
+        @server_name.route("/")
+        def hello_world():
+            return "Hello, World!"
+
+# 2.   In terminal export the Flask server in the Environment Variable:
+        This will add main.py for Flask as the server name in the 'env'.
+        $ export FLASK_APP=main.py
+
+        This command starts the Flask server:
+
+        if __name__ == "__main__":
+            app.run()
+
+        In Terminal:
+        $ flask run
+        We could also run: $ python -m flask
+
+# 3. Debug mode: off (Auto-reload)
+    Turn Debug mode ON, so the server updates changes automatically, instead
+    of restarting the server everytime we make a change.
+
+    To enable all development features (including debug mode) you can export
+    the FLASK_ENV environment variable and set it to development before running the server:
+
+    $ export FLASK_ENV=development
+    $ flask run
+    We could also set debug=True in app.run() line of code:
+    if __name__ == "__main__":
+    app.run(debug=True)
+
+
+
+ ========================================
+A decorator, is a function that adds/modify an additional abilities for another function
